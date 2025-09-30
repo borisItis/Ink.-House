@@ -24,8 +24,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1440px;
-  width: 100%;
+  padding: 20px 165px;
   margin: 0 auto;
   gap: 8px;
 }
@@ -78,6 +77,9 @@ nav {
 }
 
 @media (max-width: 1024px) {
+  .nav {
+    padding: 20px 32px;
+  }
   .nav__right {
     gap: 32px;
   }
@@ -87,6 +89,9 @@ nav {
 }
 
 @media (max-width: 690px) {
+  .nav {
+    padding: 20px 32px;
+  }
   .nav__right {
     gap: 32px;
   }
@@ -96,6 +101,9 @@ nav {
 }
 
 @media (max-width: 510px) {
+  .nav {
+    padding: 15px;
+  }
   .header {
     display: flex;
     flex-direction: column;

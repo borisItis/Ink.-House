@@ -6,7 +6,10 @@
       <img src="../assets/heroImage.svg" alt="" />
     </div>
     <div class="hero__content">
-      <h1 class="hero__title">Реплики картин от <span>Ink. House</span></h1>
+      <h1 class="hero__title">
+        Реплики картин <br />
+        от <span>Ink. House</span>
+      </h1>
       <p class="hero__description">
         Высокое качество отрисовки на плотной бумаге или льняном холсте. Редкие произведения,
         доступные цены.
@@ -124,19 +127,19 @@
   }
 
   .hero__title {
-    line-height: 1.3;
     margin-bottom: 10px;
+    font-size: 36px;
   }
 
-  .hero__text {
-    font-size: 14px;
+  .hero__description {
+    font-size: 16px;
     line-height: 1.4;
     margin-bottom: 15px;
   }
 
   .hero__button {
     font-size: 14px;
-    padding: 10px 18px;
+    padding: 20px 60px;
   }
 }
 </style>

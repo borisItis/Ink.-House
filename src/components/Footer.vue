@@ -7,8 +7,10 @@
         <a href="#!" class="footer__info-logo">
           <img src="../assets/logo.svg" alt="Logo" />
         </a>
-        <a href="tel:+7 (999) 543-54-54" class="footer__info-phone">+7 (999) 543-54-54</a>
-        <h6 class="footer__info-subtitle">Мастерская</h6>
+        <div class="footer__info-contacts">
+          <a href="tel:+7 (999) 543-54-54" class="footer__info-phone">+7 (999) 543-54-54</a>
+          <h6 class="footer__info-subtitle">Мастерская</h6>
+        </div>
       </div>
       <div class="footer__menu">
         <h4 class="footer__menu-title">Репродукции</h4>
@@ -42,7 +44,7 @@
         <a href="#!" class="footer__socials-icon">
           <img src="../assets/youtube.svg" alt="YouTube" />
         </a>
-        <div class="footer__socials-copyright">Ink. House ®<br />All rights reserved</div>
+        <p class="footer__socials-copyright">Ink. House ®<br />All rights reserved</p>
       </div>
     </div>
   </footer>
@@ -71,6 +73,12 @@
 .footer__info-logo {
   display: inline-block;
   margin-bottom: 35px;
+}
+
+.footer__info-contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .footer__info-phone {
@@ -105,7 +113,7 @@
 .footer__menu-list {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 6px;
   list-style: none;
 }
@@ -124,12 +132,14 @@
 
 .footer__socials {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  margin-bottom: 10px;
   gap: 30px;
 }
 
 .footer__socials-icon {
+  display: flex;
   align-items: center;
   width: 24px;
   height: 24px;
@@ -140,65 +150,112 @@
 }
 
 .footer__socials-copyright {
-  margin-top: 57px;
-  font-family: 'Raleway';
   font-size: 12px;
-  font-weight: 500;
-  color: #86928b;
-  line-height: 120%;
+  opacity: 0.7;
+  line-height: 1.4;
+  text-align: left;
+  flex-shrink: 0;
+  margin: 0;
 }
 
 @media (max-width: 1024px) {
   .footer__container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
   }
 
   .footer__socials {
-    grid-column: span 2;
+    grid-column: 1 / -1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .footer__socials-icon {
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+
+  .footer__socials-copyright {
+    margin-top: 0;
+    text-align: center;
   }
 }
 
 @media (max-width: 610px) {
   .footer__container {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 20px;
   }
 
-  .footer__info,
-  .footer__menu,
-  .footer__socials {
+  .footer__info {
+    grid-column: 1 / -1;
     text-align: center;
+    margin-bottom: 10px;
   }
 
   .footer__socials {
+    grid-column: 1 / -1;
     flex-direction: column;
-    gap: 15px;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .footer__socials-icon {
+    margin-right: 0;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    display: inline-block;
+  }
+
+  .footer__socials-copyright {
+    text-align: center;
+    margin-top: 10px;
   }
 }
 
 @media (max-width: 510px) {
-  .footer__info-phone {
-    font-size: 14px;
+  .footer {
+    padding: 30px 0;
   }
 
-  .footer__menu-title {
-    font-size: 14px;
+  .footer__container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    text-align: center;
   }
 
-  .footer__menu-link {
-    font-size: 12px;
+  .footer__info {
+    grid-column: 1;
   }
 
-  .footer__socials-icon img {
-    width: 20px;
-    height: 20px;
+  .footer__menu {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 15px;
+  }
+
+  .footer__menu:last-child {
+    border-bottom: none;
+  }
+
+  .footer__socials {
+    grid-column: 1;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .footer__socials-icon {
+    margin: 0 10px 10px;
   }
 
   .footer__socials-copyright {
-    font-size: 10px;
+    width: 100%;
+    margin-top: 10px;
   }
 }
 </style>
