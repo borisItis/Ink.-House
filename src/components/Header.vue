@@ -61,7 +61,7 @@ nav {
 }
 
 .nav__list-item:hover {
-  color: #e1ede6;
+  color: #86928b;
   transition: all 0.4s ease;
 }
 
@@ -75,5 +75,62 @@ nav {
 .nav__button:hover {
   color: #e1ede6;
   transition: all 0.4s ease;
+}
+
+@media (max-width: 1024px) {
+  .nav__right {
+    gap: 32px;
+  }
+  .nav__list {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 690px) {
+  .nav__right {
+    gap: 32px;
+  }
+  .nav__list {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 510px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .header__logo {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  .header__nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    order: 2;
+  }
+
+  .nav__list-item {
+    font-size: 18px;
+  }
+
+  .header__cart {
+    margin-left: 15px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .header__bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
 }
 </style>

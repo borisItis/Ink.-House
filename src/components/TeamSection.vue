@@ -78,4 +78,23 @@
   width: 80px;
   height: 80px;
 }
+
+@media (max-width: 1024px) {
+  .team__section {
+    grid-template-columns: 1fr;
+    padding: 32px 16px;
+  }
+}
+
+@media (max-width: 610px) {
+  .team__section-visual {
+    width: 100%;
+  }
+}
+
+@media (max-width: 510px) {
+  .team__section-content {
+    text-align: left;
+  }
+}
 </style>

@@ -42,7 +42,7 @@
         <a href="#!" class="footer__socials-icon">
           <img src="../assets/youtube.svg" alt="YouTube" />
         </a>
-        <p class="footer__socials-copyright">Ink. House ®<br />All rights reserved</p>
+        <div class="footer__socials-copyright">Ink. House ®<br />All rights reserved</div>
       </div>
     </div>
   </footer>
@@ -124,6 +124,8 @@
 
 .footer__socials {
   display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
   gap: 30px;
 }
 
@@ -144,5 +146,59 @@
   font-weight: 500;
   color: #86928b;
   line-height: 120%;
+}
+
+@media (max-width: 1024px) {
+  .footer__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    text-align: center;
+  }
+
+  .footer__socials {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 610px) {
+  .footer__container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .footer__info,
+  .footer__menu,
+  .footer__socials {
+    text-align: center;
+  }
+
+  .footer__socials {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 510px) {
+  .footer__info-phone {
+    font-size: 14px;
+  }
+
+  .footer__menu-title {
+    font-size: 14px;
+  }
+
+  .footer__menu-link {
+    font-size: 12px;
+  }
+
+  .footer__socials-icon img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .footer__socials-copyright {
+    font-size: 10px;
+  }
 }
 </style>

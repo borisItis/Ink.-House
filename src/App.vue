@@ -5,6 +5,7 @@ import SectionCard from './components/SectionCard.vue'
 import Newbies from './components/Newbies.vue'
 import TeamSection from './components/TeamSection.vue'
 import Footer from './components/Footer.vue'
+import CatalogCard from './components/CatalogCard.vue'
 </script>
 
 <template>
@@ -14,6 +15,7 @@ import Footer from './components/Footer.vue'
     <SectionCard />
     <Newbies />
     <TeamSection />
+    <CatalogCard />
   </main>
   <Footer />
 </template>

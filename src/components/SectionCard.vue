@@ -1,66 +1,216 @@
-<script setup></script>
+<script setup>
+import { ref } from 'vue'
+import CatalogCard from './CatalogCard.vue'
+import cardImage1 from '../assets/card1.svg'
+import cardImage2 from '../assets/card2.svg'
+import cardImage3 from '../assets/card3.svg'
+import cardImage4 from '../assets/card4.svg'
+import cardImage5 from '../assets/card5.svg'
+import cardImage6 from '../assets/card6.svg'
+import Germany1 from '../assets/germany1.svg'
+import Germany2 from '../assets/germany2.svg'
+import Germany3 from '../assets/germany3.svg'
+import Germany4 from '../assets/germany4.svg'
+import Germany5 from '../assets/germany5.svg'
+import Germany6 from '../assets/germany6.svg'
+import England1 from '../assets/england.svg'
+import England2 from '../assets/england2.svg'
+import England3 from '../assets/england3.svg'
+import England4 from '../assets/england4.svg'
+import England5 from '../assets/england5.svg'
+import England6 from '../assets/england6.svg'
 
+const selectedCountry = ref('Франция')
+const selectedCategory = ref('Германия')
+const selectedCount = ref('Англия')
+
+const cards = [
+  {
+    country: 'Франция',
+    image: cardImage1,
+    author: 'Марсель Руссо',
+    title: 'Охота Амура',
+    description: 'Холст, масло (50х80)',
+    price: '14 500 руб',
+  },
+  {
+    country: 'Франция',
+    image: cardImage2,
+    author: 'Анри Селин',
+    title: 'Дама с собачкой',
+    description: 'Акрил, бумага (50х80)',
+    price: '16 500 руб',
+  },
+  {
+    country: 'Франция',
+    image: cardImage3,
+    author: 'Франсуа Дюпон',
+    title: 'Процедура',
+    description: 'Цветная литография (40х60) ',
+    price: '20 000 руб',
+  },
+  {
+    country: 'Франция',
+    image: cardImage4,
+    author: 'Луи Детуш',
+    title: 'Роза',
+    description: 'Бумага, акрил (50х80) ',
+    price: '12 000 руб',
+  },
+  {
+    country: 'Франция',
+    image: cardImage5,
+    author: 'Франсуа Дюпон',
+    title: 'Птичья трапеза',
+    description: 'Цветная литография (40х60)',
+    price: '22 500 руб',
+  },
+  {
+    country: 'Франция',
+    image: cardImage6,
+    author: 'Пьер Моранж',
+    title: 'Пейзаж с рыбой',
+    description: 'Цветная литография (40х60) ',
+    price: '22 500 руб',
+  },
+  {
+    country: 'Германия',
+    image: Germany1,
+    author: 'Курт Вернер',
+    title: 'Над городом',
+    description: 'Цветная литография (40х60) ',
+    price: '16 000 руб',
+  },
+  {
+    country: 'Германия',
+    image: Germany2,
+    author: 'Макс Рихтер',
+    title: 'Птенцы',
+    description: 'Холст, масло (50х80) ',
+    price: '14 500 руб',
+  },
+  {
+    country: 'Германия',
+    image: Germany3,
+    author: 'Мартин Майер',
+    title: 'Среди листьев',
+    description: 'Цветная литография (40х60) ',
+    price: '20 000 руб',
+  },
+  {
+    country: 'Германия',
+    image: Germany4,
+    author: 'Герман Беккер',
+    title: 'Яркая птица',
+    description: 'Цветная литография (40х60) ',
+    price: '13 000 руб',
+  },
+  {
+    country: 'Германия',
+    image: Germany5,
+    author: 'Вульф Бауэр',
+    title: 'Дятлы',
+    description: 'Бумага, акрил (50х80) ',
+    price: '20 000 руб',
+  },
+  {
+    country: 'Германия',
+    image: Germany6,
+    author: 'Вальтер Хартманн',
+    title: 'Большие воды',
+    description: 'Бумага, акрил (50х80) ',
+    price: '23 000 руб',
+  },
+  {
+    country: 'Англия',
+    image: England1,
+    author: 'Пол Смит',
+    title: 'Дикий зверь',
+    description: 'Акварель, бумага (50х80) ',
+    price: '19 500 руб',
+  },
+  {
+    country: 'Англия',
+    image: England2,
+    author: 'Джон Уайт',
+    title: 'Скалистый берег',
+    description: 'Цветная литография (40х60) ',
+    price: '17 500 руб',
+  },
+  {
+    country: 'Англия',
+    image: England3,
+    author: 'Джим Уотсон',
+    title: 'Река и горы',
+    description: 'Акварель, бумага (50х80) ',
+    price: '20 500 руб',
+  },
+  {
+    country: 'Англия',
+    image: England4,
+    author: 'Юджин Зиллион',
+    title: 'Белый попугай',
+    description: 'Цветная литография (40х60)',
+    price: '15 500 руб',
+  },
+  {
+    country: 'Англия',
+    image: England5,
+    author: 'Эрик Гиллман',
+    title: 'Ночная рыба',
+    description: 'Бумага, акрил (50х80) ',
+    price: '12 500 руб',
+  },
+  {
+    country: 'Англия',
+    image: England6,
+    author: 'Альфред Барр',
+    title: 'Рыжий кот',
+    description: 'Цветная литография (40х60) ',
+    price: '21 000 руб',
+  },
+]
+
+const filteredCards = () => cards.filter((card) => card.country === selectedCountry.value)
+</script>
 <template>
   <section class="catalog" id="catalog">
     <div class="catalog__top">
       <h2 class="catalog__top-title">Репродукции</h2>
       <div class="catalog__top-filter">
-        <button class="catalog__top-filter-button catalog__top-filter-button--active">
+        <button
+          class="catalog__top-filter-button"
+          :class="{ 'catalog__top-filter-button--active': selectedCountry === 'Франция' }"
+          @click="selectedCountry = 'Франция'"
+        >
           Франция
         </button>
-        <button class="catalog__top-filter-button">Германия</button>
-        <button class="catalog__top-filter-button">Англия</button>
+        <button
+          class="catalog__top-filter-button"
+          :class="{ 'catalog__top-filter-button--active': selectedCountry === 'Германия' }"
+          @click="selectedCountry = 'Германия'"
+        >
+          Германия
+        </button>
+        <button
+          class="catalog__top-filter-button"
+          :class="{ 'catalog__top-filter-button--active': selectedCountry === 'Англия' }"
+          @click="selectedCountry = 'Англия'"
+        >
+          Англия
+        </button>
       </div>
     </div>
     <div class="catalog__cards">
-      <article class="catalog__card">
-        <img src="../assets/card1.svg" alt="Охота Амура" class="catalog__card-image" />
-        <p class="catalog__card-author">Марсель Руссо</p>
-        <h3 class="catalog__card-title">Охота Амура</h3>
-        <p class="catalog__card-description">Холст, масло (50х80)</p>
-        <p class="catalog__card-price">14 500 руб</p>
-        <button class="catalog__card-button">В корзину</button>
-      </article>
-      <article class="catalog__card">
-        <img src="../assets/card2.svg" alt="Охота Амура" class="catalog__card-image" />
-        <p class="catalog__card-author">Анри Селин</p>
-        <h3 class="catalog__card-title">Дама с собачкой</h3>
-        <p class="catalog__card-description">Акрил, бумага (50х80)</p>
-        <p class="catalog__card-price">16 500 руб</p>
-        <button class="catalog__card-button">В корзину</button>
-      </article>
-      <article class="catalog__card">
-        <img src="../assets/card3.svg" alt="Охота Амура" class="catalog__card-image" />
-        <p class="catalog__card-author">Франсуа Дюпон</p>
-        <h3 class="catalog__card-title">Процедура</h3>
-        <p class="catalog__card-description">Цветная литография (40х60)</p>
-        <p class="catalog__card-price">20 000 руб</p>
-        <button class="catalog__card-button">В корзину</button>
-      </article>
-      <article class="catalog__card">
-        <img src="../assets/card4.svg" alt="Охота Амура" class="catalog__card-image" />
-        <p class="catalog__card-author">Луи Детуш</p>
-        <h3 class="catalog__card-title">Роза</h3>
-        <p class="catalog__card-description">Бумага, акрил (50х80)</p>
-        <p class="catalog__card-price">12 000 руб</p>
-        <button class="catalog__card-button">В корзину</button>
-      </article>
-      <article class="catalog__card">
-        <img src="../assets/card5.svg" alt="Охота Амура" class="catalog__card-image" />
-        <p class="catalog__card-author">Франсуа Дюпон</p>
-        <h3 class="catalog__card-title">Птичья трапеза</h3>
-        <p class="catalog__card-description">Цветная литография (40х60)</p>
-        <p class="catalog__card-price">22 500 руб</p>
-        <button class="catalog__card-button">В корзину</button>
-      </article>
-      <article class="catalog__card">
-        <img src="../assets/card6.svg" alt="Охота Амура" class="catalog__card-image" />
-        <p class="catalog__card-author">Пьер Моранж</p>
-        <h3 class="catalog__card-title">Пейзаж с рыбой</h3>
-        <p class="catalog__card-description">Цветная литография (40х60)</p>
-        <p class="catalog__card-price">20 000 руб</p>
-        <button class="catalog__card-button">В корзину</button>
-      </article>
+      <CatalogCard
+        v-for="(card, index) in filteredCards()"
+        :key="index"
+        :image="card.image"
+        :author="card.author"
+        :title="card.title"
+        :description="card.description"
+        :price="card.price"
+      />
     </div>
   </section>
 </template>
@@ -186,5 +336,61 @@
   background-color: #598d66;
   color: white;
   transition: all 0.4s ease-in-out;
+}
+
+.catalog__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+@media (max-width: 1024px) {
+  .catalog__cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 610px) {
+  .catalog__cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .catalog__top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .catalog__top-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 510px) {
+  .catalog__cards {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .catalog__card {
+    padding: 15px;
+  }
+
+  .catalog__card-title {
+    font-size: 16px;
+  }
+
+  .catalog__card-price {
+    font-size: 14px;
+  }
+
+  .catalog__card-button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
 }
 </style>
