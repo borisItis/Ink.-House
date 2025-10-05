@@ -3,7 +3,7 @@
 <template>
   <section class="team__section" id="team">
     <div class="team__section-visual">
-      <img src="../assets/colorTeam.svg" alt="Рука держащая кисть" />
+      <img src="../assets/TeamImage.png" alt="Рука держащая кисть" />
     </div>
     <div class="team__section-content">
       <h2 class="team__section-title">Наша команда</h2>
@@ -86,7 +86,7 @@
   }
 }
 
-@media (max-width: 610px) {
+@media (max-width: 690px) {
   .team__section-visual {
     width: 100%;
   }

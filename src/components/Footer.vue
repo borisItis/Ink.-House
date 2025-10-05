@@ -35,15 +35,17 @@
         </ul>
       </div>
       <div class="footer__socials">
-        <a href="#!" class="footer__socials-icon">
-          <img src="../assets/facebook.svg" alt="FaceBook" />
-        </a>
-        <a href="#!" class="footer__socials-icon">
-          <img src="../assets/instagram.svg" alt="Instagram" />
-        </a>
-        <a href="#!" class="footer__socials-icon">
-          <img src="../assets/youtube.svg" alt="YouTube" />
-        </a>
+        <div class="footer__socials-icons">
+          <a href="#!" class="footer__socials-icon">
+            <img src="../assets/facebook.svg" alt="FaceBook" />
+          </a>
+          <a href="#!" class="footer__socials-icon">
+            <img src="../assets/instagram.svg" alt="Instagram" />
+          </a>
+          <a href="#!" class="footer__socials-icon">
+            <img src="../assets/youtube.svg" alt="YouTube" />
+          </a>
+        </div>
         <p class="footer__socials-copyright">Ink. House ®<br />All rights reserved</p>
       </div>
     </div>
@@ -52,27 +54,29 @@
 
 <style scoped>
 .footer {
-  padding-top: 23px;
-  padding-bottom: 23px;
+  padding: 40px 0;
   background-color: #e1ede6;
 }
 
 .footer__container {
   max-width: 1440px;
-  display: flex;
   margin: 0 auto;
+  display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
 .footer__info {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  gap: 20px;
 }
 
-.footer__info-logo {
-  display: inline-block;
-  margin-bottom: 35px;
+.footer__info-logo img {
+  width: 143px;
+  height: auto;
 }
 
 .footer__info-contacts {
@@ -99,7 +103,7 @@
 .footer__menu {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  gap: 10px;
 }
 
 .footer__menu-title {
@@ -111,11 +115,12 @@
 }
 
 .footer__menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 6px;
-  list-style: none;
 }
 
 .footer__menu-link {
@@ -133,29 +138,31 @@
 .footer__socials {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
+  align-items: flex-end;
+  gap: 16px;
 }
 
-.footer__socials-icon {
+.footer__socials-icons {
   display: flex;
-  align-items: center;
+  gap: 12px;
+}
+
+.footer__socials-icon img {
   width: 24px;
   height: 24px;
+  transition: opacity 0.3s ease;
 }
 
-.footer__socials-icon:hover {
-  transform: scale(1.05);
+.footer__socials-icon:hover img {
+  opacity: 0.7;
 }
 
 .footer__socials-copyright {
-  font-size: 12px;
-  opacity: 0.7;
+  font-size: 14px;
+  color: #86928b;
+  text-align: right;
   line-height: 1.4;
-  text-align: left;
-  flex-shrink: 0;
-  margin: 0;
+  margin-top: 8px;
 }
 
 @media (max-width: 1024px) {
@@ -185,7 +192,7 @@
   }
 }
 
-@media (max-width: 610px) {
+@media (max-width: 690px) {
   .footer__container {
     grid-template-columns: 1fr 1fr;
     gap: 30px 20px;

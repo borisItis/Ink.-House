@@ -155,7 +155,7 @@ defineProps({
   }
 }
 
-@media (max-width: 610px) {
+@media (max-width: 690px) {
   .catalog__cards {
     grid-template-columns: 1fr;
     gap: 20px;

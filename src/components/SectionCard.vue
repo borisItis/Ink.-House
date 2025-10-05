@@ -1,24 +1,24 @@
 <script setup>
 import { ref } from 'vue'
 import CatalogCard from './CatalogCard.vue'
-import cardImage1 from '../assets/card1.svg'
-import cardImage2 from '../assets/card2.svg'
-import cardImage3 from '../assets/card3.svg'
-import cardImage4 from '../assets/card4.svg'
-import cardImage5 from '../assets/card5.svg'
-import cardImage6 from '../assets/card6.svg'
-import Germany1 from '../assets/germany1.svg'
-import Germany2 from '../assets/germany2.svg'
-import Germany3 from '../assets/germany3.svg'
-import Germany4 from '../assets/germany4.svg'
-import Germany5 from '../assets/germany5.svg'
-import Germany6 from '../assets/germany6.svg'
-import England1 from '../assets/england.svg'
-import England2 from '../assets/england2.svg'
-import England3 from '../assets/england3.svg'
-import England4 from '../assets/england4.svg'
-import England5 from '../assets/england5.svg'
-import England6 from '../assets/england6.svg'
+import cardImage1 from '../assets/France1.png'
+import cardImage2 from '../assets/France2.png'
+import cardImage3 from '../assets/France3.png'
+import cardImage4 from '../assets/France4.png'
+import cardImage5 from '../assets/France5.png'
+import cardImage6 from '../assets/France6.png'
+import Germany1 from '../assets/germany1.png'
+import Germany2 from '../assets/germany2.png'
+import Germany3 from '../assets/germany3.png'
+import Germany4 from '../assets/germany4.png'
+import Germany5 from '../assets/germany5.png'
+import Germany6 from '../assets/germany6.png'
+import England1 from '../assets/england1.png'
+import England2 from '../assets/england2.png'
+import England3 from '../assets/england3.png'
+import England4 from '../assets/england4.png'
+import England5 from '../assets/england5.png'
+import England6 from '../assets/england6.png'
 
 const selectedCountry = ref('Франция')
 const selectedCategory = ref('Германия')
@@ -351,7 +351,7 @@ const filteredCards = () => cards.filter((card) => card.country === selectedCoun
   }
 }
 
-@media (max-width: 610px) {
+@media (max-width: 690px) {
   .catalog__cards {
     grid-template-columns: 1fr;
     gap: 20px;

@@ -26,7 +26,7 @@
 <style scoped>
 .newbies {
   position: relative;
-  background: url('../assets/pic_background.svg');
+  background: url('../assets/Rectangle.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

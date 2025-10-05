@@ -19,12 +19,17 @@
 </template>
 
 <style scoped>
-nav {
+header {
+  width: 100%;
   background-color: #e1ede6;
+}
+
+nav {
+  max-width: 1440px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 165px;
+  padding: 20px;
   margin: 0 auto;
   gap: 8px;
 }
@@ -48,6 +53,8 @@ nav {
   display: flex;
   list-style: none;
   gap: 60px;
+  margin: 0;
+  padding: 0;
 }
 
 .nav__list-item {
@@ -57,11 +64,11 @@ nav {
   font-weight: 500;
   padding: 4px;
   color: #2c2d35;
+  transition: all 0.4s ease;
 }
 
 .nav__list-item:hover {
   color: #86928b;
-  transition: all 0.4s ease;
 }
 
 .nav__button {

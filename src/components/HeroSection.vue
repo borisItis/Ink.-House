@@ -3,7 +3,7 @@
 <template>
   <section class="hero">
     <div class="hero__image">
-      <img src="../assets/heroImage.svg" alt="" />
+      <img src="../assets/HeroImage.png" alt="Птичка на дереве" />
     </div>
     <div class="hero__content">
       <h1 class="hero__title">
