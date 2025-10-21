@@ -166,6 +166,10 @@
 }
 
 @media (max-width: 1024px) {
+  .footer {
+    padding: 30px 10px;
+  }
+
   .footer__container {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 25px;
@@ -193,6 +197,10 @@
 }
 
 @media (max-width: 690px) {
+  .footer {
+    padding: 30px 10px;
+  }
+
   .footer__container {
     grid-template-columns: 1fr 1fr;
     gap: 30px 20px;
@@ -225,9 +233,9 @@
   }
 }
 
-@media (max-width: 510px) {
+@media (max-width: 480px) {
   .footer {
-    padding: 30px 0;
+    padding: 30px 10px;
   }
 
   .footer__container {

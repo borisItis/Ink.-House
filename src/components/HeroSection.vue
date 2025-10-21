@@ -112,13 +112,13 @@
   }
 }
 
-@media (max-width: 510px) {
+@media (max-width: 690px) {
   .hero {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 20px 10px;
+    padding: 80px 10px;
   }
 
   .hero__image {
@@ -140,6 +140,27 @@
   .hero__button {
     font-size: 14px;
     padding: 20px 60px;
+  }
+}
+@media (max-width: 480px) {
+  .hero__title {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+
+  .hero__image {
+    display: none;
+  }
+
+  .hero__content {
+    padding: 20px;
+    text-align: left;
+  }
+
+  .hero__button {
+    font-size: 18px;
+    padding: 20px 60px;
+    margin-top: 40px;
   }
 }
 </style>
